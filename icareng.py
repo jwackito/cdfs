@@ -101,6 +101,7 @@ class FEIODesc(Base):
     energy = Column(Float)
     crosscalib = Column(Float)
     label = Column(String(50))
+    feios = relationship("FEIO", order_by="FEIO.id", backref="desc")
 
 class FEIO(Base):
     '''
